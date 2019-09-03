@@ -1,0 +1,19 @@
+{
+  "name": "rns-reverse",
+  "version": "1.0.0",
+  "description": "RNS Reverse Resolution",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "keywords": [
+    "rns",
+    "rif",
+    "rsk"
+  ],
+  "author": "ilanolkies",
+  "license": "ISC"
+}
