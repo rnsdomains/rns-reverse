@@ -15,5 +15,11 @@
     "rsk"
   ],
   "author": "ilanolkies",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "eth-ens-namehash": "^2.0.8"
+  },
+  "devDependencies": {
+    "@rsksmart/rns-artifacts": "^1.0.0"
+  }
 }
