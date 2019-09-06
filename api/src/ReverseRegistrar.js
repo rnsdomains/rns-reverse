@@ -20,7 +20,6 @@ class ReverseRegistrar {
    * @returns {Promise<Node>}
    */
   setName(name, options = null) {
-    console.log('name', name);
     return this.contract.methods.setName(name).send(options);
   }
 

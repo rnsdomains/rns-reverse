@@ -21,7 +21,6 @@ class NameResolver {
    * @returns {Promise<String>}
    */
   name (address) {
-    // if (address.length == 40)
     let name = `${address.slice(2).toLowerCase()}.addr.reverse`;
 
     const hash = namehash(name);
