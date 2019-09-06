@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@rsksmart/rns-artifacts": "^1.0.0",
+    "@truffle/hdwallet-provider": "^1.0.18",
     "truffle-contract": "^4.0.31"
   }
 }
