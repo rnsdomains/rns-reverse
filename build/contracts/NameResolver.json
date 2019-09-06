@@ -86,15 +86,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"interfaceID\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"node\",\"type\":\"bytes32\"}],\"name\":\"name\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"node\",\"type\":\"bytes32\"},{\"name\":\"name\",\"type\":\"string\"}],\"name\":\"setName\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"_rns\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":false,\"name\":\"name\",\"type\":\"string\"}],\"name\":\"NameChanged\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"name(bytes32)\":{\"params\":{\"node\":\"The ENS node to query.\"},\"return\":\"The associated name.\"},\"setName(bytes32,string)\":{\"params\":{\"name\":\"The name to set.\",\"node\":\"The node to update.\"}}}},\"userdoc\":{\"methods\":{\"name(bytes32)\":{\"notice\":\"Returns the name associated with an ENS node, for reverse records. Defined in EIP181.\"},\"setName(bytes32,string)\":{\"notice\":\"Sets the name associated with an ENS node, for reverse records. May only be called by the owner of that node in the ENS registry.\"}},\"notice\":\"source: https://github.com/ensdomains/resolvers/blob/master/contracts/profiles/NameResolver.sol\"}},\"settings\":{\"compilationTarget\":{\"/Users/ilanolkies/code/rnsdomains/rns-reverse/contracts/NameResolver.sol\":\"NameResolver\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ilanolkies/code/rnsdomains/rns-reverse/contracts/NameResolver.sol\":{\"keccak256\":\"0xde19fb6eeb7654b1b6804ed00b22b8d51db8b77c8f7c137402af975596a47f64\",\"urls\":[\"bzzr://3a102de9bb64a6129cc853f022809466ec965f81ff88c718e7777e7404df7a1e\"]},\"/Users/ilanolkies/code/rnsdomains/rns-reverse/contracts/ResolverBase.sol\":{\"keccak256\":\"0x5b8b4d01ac2ad6a304ff927e53900b256ff29e6030bd631565c8129d6811b563\",\"urls\":[\"bzzr://18cff37aa4b9a3f64dff76fb6b6f77265b2f37abd312511e2e644ac8da1c99e0\"]},\"@rsksmart/rns-artifacts/contracts/registry/AbstractRNS.sol\":{\"keccak256\":\"0x93adb5d7a23e74e3b2db0df320d4a078758f5a004c21d163475d75523bd87211\",\"urls\":[\"bzzr://4de7626eef4829f16a2a28a59b8e75082a804558bda23c3e6ed6d1e85e0df68a\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506040516020806106798339810180604052602081101561003057600080fd5b8101908080519060200190929190505050806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550506105e8806100916000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806301ffc9a714610046578063691f3431146100ab5780637737221314610152575b600080fd5b6100916004803603602081101561005c57600080fd5b8101908080357bffffffffffffffffffffffffffffffffffffffffffffffffffffffff191690602001909291905050506101d5565b604051808215151515815260200191505060405180910390f35b6100d7600480360360208110156100c157600080fd5b8101908080359060200190929190505050610236565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156101175780820151818401526020810190506100fc565b50505050905090810190601f1680156101445780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6101d36004803603604081101561016857600080fd5b81019080803590602001909291908035906020019064010000000081111561018f57600080fd5b8201836020820111156101a157600080fd5b803590602001918460018302840111640100000000831117156101c357600080fd5b90919293919293905050506102eb565b005b600063691f343160e01b7bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916827bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916148061022f575061022e826104c6565b5b9050919050565b6060600160008381526020019081526020016000208054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102df5780601f106102b4576101008083540402835291602001916102df565b820191906000526020600020905b8154815290600101906020018083116102c257829003601f168201915b50505050509050919050565b826000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166302571be3826040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561035e57600080fd5b505afa158015610372573d6000803e3d6000fd5b505050506040513d602081101561038857600080fd5b810190808051906020019092919050505073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610439576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600a8152602001807f4f6e6c79206f776e65720000000000000000000000000000000000000000000081525060200191505060405180910390fd5b828260016000878152602001908152602001600020919061045b929190610517565b50837fb7d29e911041e8d9b843369e890bcb72c9388692ba48b65ac54e7214c4c348f7848460405180806020018281038252848482818152602001925080828437600081840152601f19601f820116905080830192505050935050505060405180910390a250505050565b60006301ffc9a760e01b7bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916827bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916149050919050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061055857803560ff1916838001178555610586565b82800160010185558215610586579182015b8281111561058557823582559160200191906001019061056a565b5b5090506105939190610597565b5090565b6105b991905b808211156105b557600081600090555060010161059d565b5090565b9056fea165627a7a72305820d09e98468091d5526ecc844556cc15abba5230f8def3352346f7033dc2ee377e0029",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806301ffc9a714610046578063691f3431146100ab5780637737221314610152575b600080fd5b6100916004803603602081101561005c57600080fd5b8101908080357bffffffffffffffffffffffffffffffffffffffffffffffffffffffff191690602001909291905050506101d5565b604051808215151515815260200191505060405180910390f35b6100d7600480360360208110156100c157600080fd5b8101908080359060200190929190505050610236565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156101175780820151818401526020810190506100fc565b50505050905090810190601f1680156101445780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6101d36004803603604081101561016857600080fd5b81019080803590602001909291908035906020019064010000000081111561018f57600080fd5b8201836020820111156101a157600080fd5b803590602001918460018302840111640100000000831117156101c357600080fd5b90919293919293905050506102eb565b005b600063691f343160e01b7bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916827bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916148061022f575061022e826104c6565b5b9050919050565b6060600160008381526020019081526020016000208054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102df5780601f106102b4576101008083540402835291602001916102df565b820191906000526020600020905b8154815290600101906020018083116102c257829003601f168201915b50505050509050919050565b826000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166302571be3826040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561035e57600080fd5b505afa158015610372573d6000803e3d6000fd5b505050506040513d602081101561038857600080fd5b810190808051906020019092919050505073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610439576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600a8152602001807f4f6e6c79206f776e65720000000000000000000000000000000000000000000081525060200191505060405180910390fd5b828260016000878152602001908152602001600020919061045b929190610517565b50837fb7d29e911041e8d9b843369e890bcb72c9388692ba48b65ac54e7214c4c348f7848460405180806020018281038252848482818152602001925080828437600081840152601f19601f820116905080830192505050935050505060405180910390a250505050565b60006301ffc9a760e01b7bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916827bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916149050919050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061055857803560ff1916838001178555610586565b82800160010185558215610586579182015b8281111561058557823582559160200191906001019061056a565b5b5090506105939190610597565b5090565b6105b991905b808211156105b557600081600090555060010161059d565b5090565b9056fea165627a7a72305820d09e98468091d5526ecc844556cc15abba5230f8def3352346f7033dc2ee377e0029",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"interfaceID\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"node\",\"type\":\"bytes32\"}],\"name\":\"name\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"node\",\"type\":\"bytes32\"},{\"name\":\"name\",\"type\":\"string\"}],\"name\":\"setName\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"_rns\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"node\",\"type\":\"bytes32\"},{\"indexed\":false,\"name\":\"name\",\"type\":\"string\"}],\"name\":\"NameChanged\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"name(bytes32)\":{\"params\":{\"node\":\"The ENS node to query.\"},\"return\":\"The associated name.\"},\"setName(bytes32,string)\":{\"params\":{\"name\":\"The name to set.\",\"node\":\"The node to update.\"}}}},\"userdoc\":{\"methods\":{\"name(bytes32)\":{\"notice\":\"Returns the name associated with an ENS node, for reverse records. Defined in EIP181.\"},\"setName(bytes32,string)\":{\"notice\":\"Sets the name associated with an ENS node, for reverse records. May only be called by the owner of that node in the ENS registry.\"}},\"notice\":\"source: https://github.com/ensdomains/resolvers/blob/master/contracts/profiles/NameResolver.sol\"}},\"settings\":{\"compilationTarget\":{\"/Users/javiesses/Development/iov/rns-reverse/contracts/NameResolver.sol\":\"NameResolver\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/javiesses/Development/iov/rns-reverse/contracts/NameResolver.sol\":{\"keccak256\":\"0xde19fb6eeb7654b1b6804ed00b22b8d51db8b77c8f7c137402af975596a47f64\",\"urls\":[\"bzzr://3a102de9bb64a6129cc853f022809466ec965f81ff88c718e7777e7404df7a1e\"]},\"/Users/javiesses/Development/iov/rns-reverse/contracts/ResolverBase.sol\":{\"keccak256\":\"0x5b8b4d01ac2ad6a304ff927e53900b256ff29e6030bd631565c8129d6811b563\",\"urls\":[\"bzzr://18cff37aa4b9a3f64dff76fb6b6f77265b2f37abd312511e2e644ac8da1c99e0\"]},\"@rsksmart/rns-artifacts/contracts/registry/AbstractRNS.sol\":{\"keccak256\":\"0x93adb5d7a23e74e3b2db0df320d4a078758f5a004c21d163475d75523bd87211\",\"urls\":[\"bzzr://4de7626eef4829f16a2a28a59b8e75082a804558bda23c3e6ed6d1e85e0df68a\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516020806106798339810180604052602081101561003057600080fd5b8101908080519060200190929190505050806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550506105e8806100916000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806301ffc9a714610046578063691f3431146100ab5780637737221314610152575b600080fd5b6100916004803603602081101561005c57600080fd5b8101908080357bffffffffffffffffffffffffffffffffffffffffffffffffffffffff191690602001909291905050506101d5565b604051808215151515815260200191505060405180910390f35b6100d7600480360360208110156100c157600080fd5b8101908080359060200190929190505050610236565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156101175780820151818401526020810190506100fc565b50505050905090810190601f1680156101445780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6101d36004803603604081101561016857600080fd5b81019080803590602001909291908035906020019064010000000081111561018f57600080fd5b8201836020820111156101a157600080fd5b803590602001918460018302840111640100000000831117156101c357600080fd5b90919293919293905050506102eb565b005b600063691f343160e01b7bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916827bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916148061022f575061022e826104c6565b5b9050919050565b6060600160008381526020019081526020016000208054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102df5780601f106102b4576101008083540402835291602001916102df565b820191906000526020600020905b8154815290600101906020018083116102c257829003601f168201915b50505050509050919050565b826000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166302571be3826040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561035e57600080fd5b505afa158015610372573d6000803e3d6000fd5b505050506040513d602081101561038857600080fd5b810190808051906020019092919050505073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610439576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600a8152602001807f4f6e6c79206f776e65720000000000000000000000000000000000000000000081525060200191505060405180910390fd5b828260016000878152602001908152602001600020919061045b929190610517565b50837fb7d29e911041e8d9b843369e890bcb72c9388692ba48b65ac54e7214c4c348f7848460405180806020018281038252848482818152602001925080828437600081840152601f19601f820116905080830192505050935050505060405180910390a250505050565b60006301ffc9a760e01b7bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916827bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916149050919050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061055857803560ff1916838001178555610586565b82800160010185558215610586579182015b8281111561058557823582559160200191906001019061056a565b5b5090506105939190610597565b5090565b6105b991905b808211156105b557600081600090555060010161059d565b5090565b9056fea165627a7a723058209ddb4fa8e2963980e6a0c665eb7d5a9fc12b989342c61cf0a47e5c4e3b57352a0029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806301ffc9a714610046578063691f3431146100ab5780637737221314610152575b600080fd5b6100916004803603602081101561005c57600080fd5b8101908080357bffffffffffffffffffffffffffffffffffffffffffffffffffffffff191690602001909291905050506101d5565b604051808215151515815260200191505060405180910390f35b6100d7600480360360208110156100c157600080fd5b8101908080359060200190929190505050610236565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156101175780820151818401526020810190506100fc565b50505050905090810190601f1680156101445780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6101d36004803603604081101561016857600080fd5b81019080803590602001909291908035906020019064010000000081111561018f57600080fd5b8201836020820111156101a157600080fd5b803590602001918460018302840111640100000000831117156101c357600080fd5b90919293919293905050506102eb565b005b600063691f343160e01b7bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916827bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916148061022f575061022e826104c6565b5b9050919050565b6060600160008381526020019081526020016000208054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102df5780601f106102b4576101008083540402835291602001916102df565b820191906000526020600020905b8154815290600101906020018083116102c257829003601f168201915b50505050509050919050565b826000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166302571be3826040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561035e57600080fd5b505afa158015610372573d6000803e3d6000fd5b505050506040513d602081101561038857600080fd5b810190808051906020019092919050505073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610439576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600a8152602001807f4f6e6c79206f776e65720000000000000000000000000000000000000000000081525060200191505060405180910390fd5b828260016000878152602001908152602001600020919061045b929190610517565b50837fb7d29e911041e8d9b843369e890bcb72c9388692ba48b65ac54e7214c4c348f7848460405180806020018281038252848482818152602001925080828437600081840152601f19601f820116905080830192505050935050505060405180910390a250505050565b60006301ffc9a760e01b7bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916827bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916149050919050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061055857803560ff1916838001178555610586565b82800160010185558215610586579182015b8281111561058557823582559160200191906001019061056a565b5b5090506105939190610597565b5090565b6105b991905b808211156105b557600081600090555060010161059d565b5090565b9056fea165627a7a723058209ddb4fa8e2963980e6a0c665eb7d5a9fc12b989342c61cf0a47e5c4e3b57352a0029",
   "sourceMap": "224:1277:1:-;;;566:65;8:9:-1;5:2;;;30:1;27;20:12;5:2;566:65:1;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;566:65:1;;;;;;;;;;;;;;;;620:4;614:3;;:10;;;;;;;;;;;;;;;;;;566:65;224:1277;;;;;;",
   "deployedSourceMap": "224:1277:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;224:1277:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1330:169;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1330:169:1;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1223:101;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1223:101:1;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1223:101:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;872:151;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;872:151:1;;;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;872:151:1;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;872:151:1;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;872:151:1;;;;;;;;;;;;:::i;:::-;;1330:169;1397:4;312:10;1435:17;;1420:32;;;:11;:32;;;;:72;;;;1456:36;1480:11;1456:23;:36::i;:::-;1420:72;1413:79;;1330:169;;;:::o;1223:101::-;1274:13;1306:5;:11;1312:4;1306:11;;;;;;;;;;;1299:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1223:101;;;:::o;872:151::-;944:4;512:3;;;;;;;;;;;:9;;;522:4;512:15;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;512:15:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;512:15:1;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;512:15:1;;;;;;;;;;;;;;;;498:29;;:10;:29;;;490:52;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;974:4;;960:5;:11;966:4;960:11;;;;;;;;;;;:18;;;;;;;:::i;:::-;;1005:4;993:23;1011:4;;993:23;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;993:23:1;;;;;;;;;;;;;;872:151;;;;:::o;205:129:2:-;272:4;188:10;310:17;;295:32;;;:11;:32;;;;288:39;;205:129;;;:::o;224:1277:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
   "source": "pragma solidity ^0.5.0;\n\nimport \"./ResolverBase.sol\";\nimport \"@rsksmart/rns-artifacts/contracts/registry/AbstractRNS.sol\";\n\n/// source: https://github.com/ensdomains/resolvers/blob/master/contracts/profiles/NameResolver.sol\ncontract NameResolver is ResolverBase {\n    bytes4 constant private NAME_INTERFACE_ID = 0x691f3431;\n    AbstractRNS rns;\n\n    event NameChanged(bytes32 indexed node, string name);\n\n    mapping(bytes32=>string) names;\n\n    modifier onlyOwner (bytes32 node) {\n        require(msg.sender == rns.owner(node), \"Only owner\");\n        _;\n    }\n\n    constructor (AbstractRNS _rns) public {\n        rns = _rns;\n    }\n\n    /**\n     * Sets the name associated with an ENS node, for reverse records.\n     * May only be called by the owner of that node in the ENS registry.\n     * @param node The node to update.\n     * @param name The name to set.\n     */\n    function setName(bytes32 node, string calldata name) external onlyOwner(node) {\n        names[node] = name;\n        emit NameChanged(node, name);\n    }\n\n    /**\n     * Returns the name associated with an ENS node, for reverse records.\n     * Defined in EIP181.\n     * @param node The ENS node to query.\n     * @return The associated name.\n     */\n    function name(bytes32 node) external view returns (string memory) {\n        return names[node];\n    }\n\n    function supportsInterface(bytes4 interfaceID) public pure returns(bool) {\n        return interfaceID == NAME_INTERFACE_ID || super.supportsInterface(interfaceID);\n    }\n}\n",
-  "sourcePath": "/Users/ilanolkies/code/rnsdomains/rns-reverse/contracts/NameResolver.sol",
+  "sourcePath": "/Users/javiesses/Development/iov/rns-reverse/contracts/NameResolver.sol",
   "ast": {
-    "absolutePath": "/Users/ilanolkies/code/rnsdomains/rns-reverse/contracts/NameResolver.sol",
+    "absolutePath": "/Users/javiesses/Development/iov/rns-reverse/contracts/NameResolver.sol",
     "exportedSymbols": {
       "NameResolver": [
         156
@@ -115,7 +115,7 @@
         "src": "0:23:1"
       },
       {
-        "absolutePath": "/Users/ilanolkies/code/rnsdomains/rns-reverse/contracts/ResolverBase.sol",
+        "absolutePath": "/Users/javiesses/Development/iov/rns-reverse/contracts/ResolverBase.sol",
         "file": "./ResolverBase.sol",
         "id": 59,
         "nodeType": "ImportDirective",
@@ -131,7 +131,7 @@
         "id": 60,
         "nodeType": "ImportDirective",
         "scope": 157,
-        "sourceUnit": 445,
+        "sourceUnit": 461,
         "src": "54:68:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -224,7 +224,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_AbstractRNS_$444",
+              "typeIdentifier": "t_contract$_AbstractRNS_$460",
               "typeString": "contract AbstractRNS"
             },
             "typeName": {
@@ -232,10 +232,10 @@
               "id": 66,
               "name": "AbstractRNS",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 444,
+              "referencedDeclaration": 460,
               "src": "328:11:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_AbstractRNS_$444",
+                "typeIdentifier": "t_contract$_AbstractRNS_$460",
                 "typeString": "contract AbstractRNS"
               }
             },
@@ -385,7 +385,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 459,
+                            "referencedDeclaration": 475,
                             "src": "498:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -441,7 +441,7 @@
                               "referencedDeclaration": 67,
                               "src": "512:3:1",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_AbstractRNS_$444",
+                                "typeIdentifier": "t_contract$_AbstractRNS_$460",
                                 "typeString": "contract AbstractRNS"
                               }
                             },
@@ -452,7 +452,7 @@
                             "lValueRequested": false,
                             "memberName": "owner",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 373,
+                            "referencedDeclaration": 389,
                             "src": "512:9:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_address_$",
@@ -513,10 +513,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        462,
-                        463
+                        478,
+                        479
                       ],
-                      "referencedDeclaration": 463,
+                      "referencedDeclaration": 479,
                       "src": "490:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -611,7 +611,7 @@
                       "referencedDeclaration": 67,
                       "src": "614:3:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_AbstractRNS_$444",
+                        "typeIdentifier": "t_contract$_AbstractRNS_$460",
                         "typeString": "contract AbstractRNS"
                       }
                     },
@@ -626,13 +626,13 @@
                       "referencedDeclaration": 96,
                       "src": "620:4:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_AbstractRNS_$444",
+                        "typeIdentifier": "t_contract$_AbstractRNS_$460",
                         "typeString": "contract AbstractRNS"
                       }
                     },
                     "src": "614:10:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_AbstractRNS_$444",
+                      "typeIdentifier": "t_contract$_AbstractRNS_$460",
                       "typeString": "contract AbstractRNS"
                     }
                   },
@@ -663,7 +663,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_AbstractRNS_$444",
+                    "typeIdentifier": "t_contract$_AbstractRNS_$460",
                     "typeString": "contract AbstractRNS"
                   },
                   "typeName": {
@@ -671,10 +671,10 @@
                     "id": 95,
                     "name": "AbstractRNS",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 444,
+                    "referencedDeclaration": 460,
                     "src": "579:11:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_AbstractRNS_$444",
+                      "typeIdentifier": "t_contract$_AbstractRNS_$460",
                       "typeString": "contract AbstractRNS"
                     }
                   },
@@ -1188,7 +1188,7 @@
                           "name": "super",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 480,
+                          "referencedDeclaration": 496,
                           "src": "1456:5:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_super$_NameResolver_$156",
@@ -1323,7 +1323,7 @@
     "src": "0:1502:1"
   },
   "legacyAST": {
-    "absolutePath": "/Users/ilanolkies/code/rnsdomains/rns-reverse/contracts/NameResolver.sol",
+    "absolutePath": "/Users/javiesses/Development/iov/rns-reverse/contracts/NameResolver.sol",
     "exportedSymbols": {
       "NameResolver": [
         156
@@ -1344,7 +1344,7 @@
         "src": "0:23:1"
       },
       {
-        "absolutePath": "/Users/ilanolkies/code/rnsdomains/rns-reverse/contracts/ResolverBase.sol",
+        "absolutePath": "/Users/javiesses/Development/iov/rns-reverse/contracts/ResolverBase.sol",
         "file": "./ResolverBase.sol",
         "id": 59,
         "nodeType": "ImportDirective",
@@ -1360,7 +1360,7 @@
         "id": 60,
         "nodeType": "ImportDirective",
         "scope": 157,
-        "sourceUnit": 445,
+        "sourceUnit": 461,
         "src": "54:68:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1453,7 +1453,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_AbstractRNS_$444",
+              "typeIdentifier": "t_contract$_AbstractRNS_$460",
               "typeString": "contract AbstractRNS"
             },
             "typeName": {
@@ -1461,10 +1461,10 @@
               "id": 66,
               "name": "AbstractRNS",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 444,
+              "referencedDeclaration": 460,
               "src": "328:11:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_AbstractRNS_$444",
+                "typeIdentifier": "t_contract$_AbstractRNS_$460",
                 "typeString": "contract AbstractRNS"
               }
             },
@@ -1614,7 +1614,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 459,
+                            "referencedDeclaration": 475,
                             "src": "498:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -1670,7 +1670,7 @@
                               "referencedDeclaration": 67,
                               "src": "512:3:1",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_AbstractRNS_$444",
+                                "typeIdentifier": "t_contract$_AbstractRNS_$460",
                                 "typeString": "contract AbstractRNS"
                               }
                             },
@@ -1681,7 +1681,7 @@
                             "lValueRequested": false,
                             "memberName": "owner",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 373,
+                            "referencedDeclaration": 389,
                             "src": "512:9:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_address_$",
@@ -1742,10 +1742,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        462,
-                        463
+                        478,
+                        479
                       ],
-                      "referencedDeclaration": 463,
+                      "referencedDeclaration": 479,
                       "src": "490:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1840,7 +1840,7 @@
                       "referencedDeclaration": 67,
                       "src": "614:3:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_AbstractRNS_$444",
+                        "typeIdentifier": "t_contract$_AbstractRNS_$460",
                         "typeString": "contract AbstractRNS"
                       }
                     },
@@ -1855,13 +1855,13 @@
                       "referencedDeclaration": 96,
                       "src": "620:4:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_AbstractRNS_$444",
+                        "typeIdentifier": "t_contract$_AbstractRNS_$460",
                         "typeString": "contract AbstractRNS"
                       }
                     },
                     "src": "614:10:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_AbstractRNS_$444",
+                      "typeIdentifier": "t_contract$_AbstractRNS_$460",
                       "typeString": "contract AbstractRNS"
                     }
                   },
@@ -1892,7 +1892,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_AbstractRNS_$444",
+                    "typeIdentifier": "t_contract$_AbstractRNS_$460",
                     "typeString": "contract AbstractRNS"
                   },
                   "typeName": {
@@ -1900,10 +1900,10 @@
                     "id": 95,
                     "name": "AbstractRNS",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 444,
+                    "referencedDeclaration": 460,
                     "src": "579:11:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_AbstractRNS_$444",
+                      "typeIdentifier": "t_contract$_AbstractRNS_$460",
                       "typeString": "contract AbstractRNS"
                     }
                   },
@@ -2417,7 +2417,7 @@
                           "name": "super",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 480,
+                          "referencedDeclaration": 496,
                           "src": "1456:5:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_super$_NameResolver_$156",
@@ -2556,21 +2556,15 @@
     "version": "0.5.8+commit.23d335f2.Emscripten.clang"
   },
   "networks": {
-    "31": {
-      "events": {},
-      "links": {},
-      "address": "0xC3061160f315F080A6A0Bd0eb733540788Ac6c8C",
-      "transactionHash": "0x022cf93ee0b5c32132529ff1f78ae805b2adab8122ae3462e5075573ba70f0f8"
-    },
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x62AB1cE6881faBAf425502B005b53Fc6562C4617",
-      "transactionHash": "0x54cf84b5690f75d0031c0ce69f7c3b48b0700132284624eaeb5d472a929e466b"
+      "address": "0x9219d70E57FEbC667D4c138fCA67A5D959aa9029",
+      "transactionHash": "0xa40ffb7185f1184fe0a9c47b7fa4a471dc319b498e396e86e0ed72dd0a6f31d7"
     }
   },
-  "schemaVersion": "3.0.10",
-  "updatedAt": "2019-09-06T18:46:10.595Z",
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-09-06T20:58:55.466Z",
   "devdoc": {
     "methods": {
       "name(bytes32)": {
