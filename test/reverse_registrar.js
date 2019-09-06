@@ -79,9 +79,9 @@ contract('ReverseRegistrar - EIP-181 compatibillity', async accounts => {
     it('sets the resolver of the name hex(x).addr.reverse to the specified resolver', async () => {
       await registrar.claimWithResolver(accounts[0], customResolver);
 
-      const actualResovler = await rns.resolver(node);
+      const actualResolver = await rns.resolver(node);
 
-      assert.equal(actualResovler, customResolver);
+      assert.equal(actualResolver, customResolver);
     });
 
     it('transfer ownership of the name to the provided address', async () => {
