@@ -21,15 +21,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"interfaceID\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{},\"notice\":\"source: https://github.com/ensdomains/resolvers/blob/master/contracts/ResolverBase.sol\"}},\"settings\":{\"compilationTarget\":{\"/Users/ilan/RSK/rnsdomains/rns-reverse/contracts/ResolverBase.sol\":\"ResolverBase\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ilan/RSK/rnsdomains/rns-reverse/contracts/ResolverBase.sol\":{\"keccak256\":\"0x5b8b4d01ac2ad6a304ff927e53900b256ff29e6030bd631565c8129d6811b563\",\"urls\":[\"bzzr://18cff37aa4b9a3f64dff76fb6b6f77265b2f37abd312511e2e644ac8da1c99e0\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5061010c806100206000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806301ffc9a714602d575b600080fd5b607560048036036020811015604157600080fd5b8101908080357bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19169060200190929190505050608f565b604051808215151515815260200191505060405180910390f35b60006301ffc9a760e01b7bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916827bffffffffffffffffffffffffffffffffffffffffffffffffffffffff191614905091905056fea165627a7a72305820fc497dfd154c496d2804ae04380680d3e1e29f4814e978e8ad08abbb81baa33f0029",
-  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c806301ffc9a714602d575b600080fd5b607560048036036020811015604157600080fd5b8101908080357bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19169060200190929190505050608f565b604051808215151515815260200191505060405180910390f35b60006301ffc9a760e01b7bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916827bffffffffffffffffffffffffffffffffffffffffffffffffffffffff191614905091905056fea165627a7a72305820fc497dfd154c496d2804ae04380680d3e1e29f4814e978e8ad08abbb81baa33f0029",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"interfaceID\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{},\"notice\":\"source: https://github.com/ensdomains/resolvers/blob/master/contracts/ResolverBase.sol\"}},\"settings\":{\"compilationTarget\":{\"/Users/ilanolkies/code/rnsdomains/rns-reverse/contracts/ResolverBase.sol\":\"ResolverBase\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ilanolkies/code/rnsdomains/rns-reverse/contracts/ResolverBase.sol\":{\"keccak256\":\"0x5b8b4d01ac2ad6a304ff927e53900b256ff29e6030bd631565c8129d6811b563\",\"urls\":[\"bzzr://18cff37aa4b9a3f64dff76fb6b6f77265b2f37abd312511e2e644ac8da1c99e0\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061010c806100206000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806301ffc9a714602d575b600080fd5b607560048036036020811015604157600080fd5b8101908080357bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19169060200190929190505050608f565b604051808215151515815260200191505060405180910390f35b60006301ffc9a760e01b7bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916827bffffffffffffffffffffffffffffffffffffffffffffffffffffffff191614905091905056fea165627a7a72305820184041fa64012e5d2e96f9213bbd42c9a6aa195304719871013dacfd1fab707f0029",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c806301ffc9a714602d575b600080fd5b607560048036036020811015604157600080fd5b8101908080357bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19169060200190929190505050608f565b604051808215151515815260200191505060405180910390f35b60006301ffc9a760e01b7bffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916827bffffffffffffffffffffffffffffffffffffffffffffffffffffffff191614905091905056fea165627a7a72305820184041fa64012e5d2e96f9213bbd42c9a6aa195304719871013dacfd1fab707f0029",
   "sourceMap": "116:220:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;116:220:2;;;;;;;",
   "deployedSourceMap": "116:220:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;116:220:2;;;;;;;;;;;;;;;;;;;205:129;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;205:129:2;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;272:4;188:10;310:17;;295:32;;;:11;:32;;;;288:39;;205:129;;;:::o",
   "source": "pragma solidity ^0.5.0;\n\n/// source: https://github.com/ensdomains/resolvers/blob/master/contracts/ResolverBase.sol\ncontract ResolverBase {\n    bytes4 private constant INTERFACE_META_ID = 0x01ffc9a7;\n\n    function supportsInterface(bytes4 interfaceID) public pure returns(bool) {\n        return interfaceID == INTERFACE_META_ID;\n    }\n}\n",
-  "sourcePath": "/Users/ilan/RSK/rnsdomains/rns-reverse/contracts/ResolverBase.sol",
+  "sourcePath": "/Users/ilanolkies/code/rnsdomains/rns-reverse/contracts/ResolverBase.sol",
   "ast": {
-    "absolutePath": "/Users/ilan/RSK/rnsdomains/rns-reverse/contracts/ResolverBase.sol",
+    "absolutePath": "/Users/ilanolkies/code/rnsdomains/rns-reverse/contracts/ResolverBase.sol",
     "exportedSymbols": {
       "ResolverBase": [
         174
@@ -251,7 +251,7 @@
     "src": "0:337:2"
   },
   "legacyAST": {
-    "absolutePath": "/Users/ilan/RSK/rnsdomains/rns-reverse/contracts/ResolverBase.sol",
+    "absolutePath": "/Users/ilanolkies/code/rnsdomains/rns-reverse/contracts/ResolverBase.sol",
     "exportedSymbols": {
       "ResolverBase": [
         174
@@ -477,8 +477,8 @@
     "version": "0.5.8+commit.23d335f2.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.0.14",
-  "updatedAt": "2019-09-05T18:08:39.891Z",
+  "schemaVersion": "3.0.10",
+  "updatedAt": "2019-09-06T17:57:44.570Z",
   "devdoc": {
     "methods": {}
   },
