@@ -11,7 +11,15 @@ module.exports = (deployer, network, accounts) => {
     return devMigration(deployer, accounts[0]);
   }
 
-  console.log('invalid network')
+  if (network === 'testnet') {
+    return prodMigration(deployer, '0xe0ba8a9ff14a7dfeab227a4f685b08a1084f4ad1');
+  }
+
+  if (network === 'mainnet') {
+    return prodMigration(deployer, '0xcb868aeabd31e2b66f74e9a55cf064abb31a4ad5');
+  }
+
+  console.log('invalid network');
 };
 
 function devMigration (deployer, from) {
@@ -42,5 +50,13 @@ function devMigration (deployer, from) {
   })
   .then(() => {
     return rns.setOwner(namehash('addr.reverse'), registrar.address, { from });
+  });
+}
+
+function prodMigration (deployer, rnsAddress) {
+  return deployer
+  .deploy(ReverseRegistrar, rnsAddress)
+  .then(_ => {
+    return deployer.deploy(NameResolver, rnsAddress);
   });
 }
