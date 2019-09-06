@@ -20,6 +20,7 @@
     "eth-ens-namehash": "^2.0.8"
   },
   "devDependencies": {
-    "@rsksmart/rns-artifacts": "^1.0.0"
+    "@rsksmart/rns-artifacts": "^1.0.0",
+    "truffle-contract": "^4.0.31"
   }
 }
