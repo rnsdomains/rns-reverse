@@ -22,6 +22,8 @@
   "devDependencies": {
     "@rsksmart/rns-artifacts": "^1.0.0",
     "@truffle/hdwallet-provider": "^1.0.18",
+    "chai": "^4.2.0",
+    "openzeppelin-test-helpers": "^0.4.3",
     "truffle-contract": "^4.0.31"
   }
 }

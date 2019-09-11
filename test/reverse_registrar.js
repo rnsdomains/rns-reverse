@@ -3,6 +3,7 @@ var rnsData = require('@rsksmart/rns-artifacts/build/contracts/RNS.json');
 var RNS = _contract(rnsData);
 const NameResolver = artifacts.require('NameResolver');
 const ReverseRegistrar = artifacts.require('ReverseRegistrar');
+const ReverseSetup = artifacts.require('ReverseSetup');
 
 const assert = require('assert');
 const namehash = require('eth-ens-namehash').hash;
@@ -17,11 +18,9 @@ contract('ReverseRegistrar - EIP-181 compatibillity', async accounts => {
     rns = await RNS.new({ from: accounts[0] });
     resolver = await NameResolver.new(rns.address);
     registrar = await ReverseRegistrar.new(rns.address);
-
-    await rns.setSubnodeOwner('0x00', web3.utils.sha3('reverse'), accounts[0], { from: accounts[0] });
-    await rns.setSubnodeOwner(namehash('reverse'), web3.utils.sha3('addr'), accounts[0], { from: accounts[0] });
-    await rns.setResolver(root, resolver.address, { from: accounts[0] });
-    await rns.setOwner(root, registrar.address, { from: accounts[0] });
+    const reverseSetup = await ReverseSetup.new(rns.address, resolver.address, registrar.address, accounts[0]);
+    await rns.setSubnodeOwner('0x00', web3.utils.sha3('reverse'), reverseSetup.address, { from: accounts[0] });
+    await reverseSetup.run();
   });
 
   it('must own addr.reverse', async () => {
