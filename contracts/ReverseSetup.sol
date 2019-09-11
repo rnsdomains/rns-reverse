@@ -28,8 +28,7 @@ contract ReverseSetup {
 
         // run
         rns.setResolver(REVERSE, nameResolver);
-        rns.setSubnodeOwner(REVERSE, keccak256('addr'), address(this));
-        rns.setOwner(ADDR_REVERSE, reverseRegistrar);
+        rns.setSubnodeOwner(REVERSE, keccak256('addr'), reverseRegistrar);
         rns.setOwner(REVERSE, reverseOwner);
 
         // assert
