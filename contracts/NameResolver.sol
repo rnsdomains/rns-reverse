@@ -21,23 +21,19 @@ contract NameResolver is ResolverBase {
         rns = _rns;
     }
 
-    /**
-     * Sets the name associated with an ENS node, for reverse records.
-     * May only be called by the owner of that node in the ENS registry.
-     * @param node The node to update.
-     * @param name The name to set.
-     */
+    /// @notice Sets the name associated with an RNS node, for reverse records.
+    /// @dev May only be called by the owner of that node in the RNS registry.
+    /// @param node The node to update.
+    /// @param name The name to set.
     function setName(bytes32 node, string calldata name) external onlyOwner(node) {
         names[node] = name;
         emit NameChanged(node, name);
     }
 
-    /**
-     * Returns the name associated with an ENS node, for reverse records.
-     * Defined in EIP181.
-     * @param node The ENS node to query.
-     * @return The associated name.
-     */
+    /// @notice Returns the name associated with an RNS node, for reverse records.
+    /// @dev Defined in EIP181.
+    /// @param node The node to query.
+    /// @return The associated name.
     function name(bytes32 node) external view returns (string memory) {
         return names[node];
     }
