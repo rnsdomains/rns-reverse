@@ -25,8 +25,8 @@ contract ReverseRegistrar {
     }
 
     /// @notice Transfer ownership of the name hex(msg.sender).addr.reverse
-    /// @dev Allows the caller to specify an owner other than themselves
-    /// calling account. The resulting account has `name()` resolver.
+    /// @dev Allows the caller to specify an owner other than themselves.
+    /// The resulting account has `name()` resolver.
     /// @param owner The address to set as the owner of the reverse record in RNS.
     /// @return The RNS node hash of the reverse record.
     function claim(address owner) public returns (bytes32 node) {
