@@ -4,7 +4,7 @@ jobs:
     working_directory: ~/tpm
 
     docker:
-      - image: circleci/node:7
+      - image: circleci/node:latest
 
     steps:
       - checkout
