@@ -1,0 +1,23 @@
+version: 2.1
+jobs:
+  build:
+    working_directory: ~/tpm
+
+    docker:
+      - image: circleci/node:7
+
+    steps:
+      - checkout
+      - run:
+          name: Prepare Truffle
+          command: sudo npm install -g truffle
+
+      - run:
+          name: Install rns-reverse
+          command: |
+                    cd ~/tpm/
+                    npm install  
+      - run:
+          name: Run Truffle Tests
+          command: npm test
+
