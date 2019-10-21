@@ -5,6 +5,8 @@
 - Name resolver: [0x4b1a11bf6723e60b9d2e02aa3ece34e24bde77d9](https://explorer.rsk.co/address/0x4b1a11bf6723e60b9d2e02aa3ece34e24bde77d9)
 - Reverse registrar: [0xd25c3f94a743b93ecffecbe691beea51c3c2d9d1](https://explorer.rsk.co/address/0xd25c3f94a743b93ecffecbe691beea51c3c2d9d1)
 
+> Read the docs [here](https://docs.rns.rifos.org/Architecture/ReverseSuite/)
+
 ## Summary
 
 RIF implementation of [EIP-181](https://eips.ethereum.org/EIPS/eip-181) in RSK network. 
