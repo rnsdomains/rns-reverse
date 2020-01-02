@@ -1,13 +1,17 @@
 {
-  "name": "rns-reverse",
+  "name": "@rsksmart/rns-reverse",
   "version": "1.0.0",
-  "description": "RNS Reverse Resolution",
-  "main": "truffle-config.js",
-  "directories": {
-    "test": "test"
-  },
+  "description": "RNS Reverse",
+  "files": [
+    "/contracts",
+    "!/contracts/Migrations.sol"
+  ],
   "scripts": {
     "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rnsdomains/rns-reverse.git"
   },
   "keywords": [
     "rns",
@@ -16,14 +20,16 @@
   ],
   "author": "ilanolkies",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rnsdomains/rns-reverse/issues"
+  },
   "dependencies": {
-    "eth-ens-namehash": "^2.0.8"
+    "@rsksmart/rns-registry": "^1.0.0"
   },
   "devDependencies": {
-    "@rsksmart/rns-artifacts": "^1.0.0",
     "@truffle/hdwallet-provider": "^1.0.18",
     "chai": "^4.2.0",
-    "openzeppelin-test-helpers": "^0.4.3",
-    "truffle-contract": "^4.0.31"
+    "eth-ens-namehash": "^2.0.8",
+    "openzeppelin-test-helpers": "^0.4.3"
   }
 }
