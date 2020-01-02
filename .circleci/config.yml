@@ -4,7 +4,7 @@ jobs:
     working_directory: ~/tpm
 
     docker:
-      - image: circleci/node:latest
+      - image: circleci/node:10
 
     steps:
       - checkout
@@ -16,7 +16,7 @@ jobs:
           name: Install rns-reverse
           command: |
                     cd ~/tpm/
-                    npm install  
+                    npm install
       - run:
           name: Run Truffle Tests
           command: npm test
