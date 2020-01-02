@@ -1,6 +1,6 @@
 pragma solidity ^0.5.0;
 
-import "@rsksmart/rns-artifacts/contracts/registry/AbstractRNS.sol";
+import "@rsksmart/rns-registry/contracts/AbstractRNS.sol";
 
 contract ReverseSetup {
     AbstractRNS rns;

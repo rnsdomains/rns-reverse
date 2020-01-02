@@ -1,7 +1,7 @@
 pragma solidity ^0.5.0;
 
 import "./ResolverBase.sol";
-import "@rsksmart/rns-artifacts/contracts/registry/AbstractRNS.sol";
+import "@rsksmart/rns-registry/contracts/AbstractRNS.sol";
 
 /// source: https://github.com/ensdomains/resolvers/blob/master/contracts/profiles/NameResolver.sol
 contract NameResolver is ResolverBase {

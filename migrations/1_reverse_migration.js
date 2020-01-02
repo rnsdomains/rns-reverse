@@ -1,6 +1,4 @@
-var _contract = require('truffle-contract');
-var rnsData = require('@rsksmart/rns-artifacts/build/contracts/RNS.json');
-var RNS = _contract(rnsData);
+const RNS = artifacts.require('RNS');
 
 const NameResolver = artifacts.require('NameResolver');
 const ReverseRegistrar = artifacts.require('ReverseRegistrar');
