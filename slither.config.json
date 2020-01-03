@@ -1,4 +1,4 @@
 {
   "filter_paths": "node_modules",
-  "detectors_to_exclude": "suicidal,constant-functions-changing-the-state,assembly-usage,pragma"
+  "detectors_to_exclude": "suicidal,constant-functions-changing-the-state,assembly-usage,pragma,missing-return"
 }

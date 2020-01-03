@@ -24,9 +24,11 @@
     "url": "https://github.com/rnsdomains/rns-reverse/issues"
   },
   "dependencies": {
+    "@openzeppelin/contracts": "^2.4.0",
     "@rsksmart/rns-registry": "^1.0.0"
   },
   "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.4",
     "@truffle/hdwallet-provider": "^1.0.18",
     "chai": "^4.2.0",
     "eth-ens-namehash": "^2.0.8",
