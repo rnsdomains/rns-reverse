@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.5.3;
 
 import "@rsksmart/rns-registry/contracts/AbstractRNS.sol";
 import "./NameResolver.sol";
@@ -19,9 +19,9 @@ contract ReverseRegistrar {
     /// @dev Sets the resolver for the name hex(msg.sender).addr.reverse to a default resolver
     /// @param name The name to set for this address.
     /// @return The RNS node hash of the reverse record.
-    function setName(string memory name) public returns (bytes32 node) {
-        node = claim(address(this));
-        NameResolver(rns.resolver(node)).setName(node, name);
+    function setName(string calldata name) external returns (bytes32 _node) {
+        _node = claim(address(this));
+        NameResolver(rns.resolver(_node)).setName(_node, name);
     }
 
     /// @notice Transfer ownership of the name hex(msg.sender).addr.reverse
@@ -29,10 +29,10 @@ contract ReverseRegistrar {
     /// The resulting account has `name()` resolver.
     /// @param owner The address to set as the owner of the reverse record in RNS.
     /// @return The RNS node hash of the reverse record.
-    function claim(address owner) public returns (bytes32 node) {
+    function claim(address owner) public returns (bytes32) {
         bytes32 label = sha3HexAddress(msg.sender);
         rns.setSubnodeOwner(ADDR_REVERSE_NODE, label, owner);
-        node = keccak256(abi.encodePacked(ADDR_REVERSE_NODE, label));
+        return keccak256(abi.encodePacked(ADDR_REVERSE_NODE, label));
     }
 
     /// @notice Sets the resolver of the name hex(msg.sender).addr.reverse to the specified resolver
@@ -40,27 +40,27 @@ contract ReverseRegistrar {
     /// @param owner The address to set as the owner of the reverse record in RNS.
     /// @param resolver The address of the resolver to set; 0 to leave default.
     /// @return The RNS node hash of the reverse record.
-    function claimWithResolver(address owner, address resolver) public returns (bytes32 node) {
+    function claimWithResolver(address owner, address resolver) external returns (bytes32 _node) {
         bytes32 label = sha3HexAddress(msg.sender);
-        node = keccak256(abi.encodePacked(ADDR_REVERSE_NODE, label));
+        _node = keccak256(abi.encodePacked(ADDR_REVERSE_NODE, label));
 
-        if (rns.owner(node) != address(this))
+        if (rns.owner(_node) != address(this))
             rns.setSubnodeOwner(ADDR_REVERSE_NODE, label, address(this));
         // registrar owns the node, with default resolver
 
         if (resolver != address(0x0) && resolver != rns.resolver(ADDR_REVERSE_NODE))
-            rns.setResolver(node, resolver);
+            rns.setResolver(_node, resolver);
         // node has default resolver for 0x00 or resolver value
 
         if (owner != address(this))
-            rns.setOwner(node, owner);
+            rns.setOwner(_node, owner);
         // owner owns node
     }
 
     /// @dev Returns the node hash for a given account's reverse records.
     /// @param addr The address to hash
     /// @return The RNS node hash.
-    function node(address addr) public pure returns (bytes32) {
+    function node(address addr) external pure returns (bytes32) {
         return keccak256(abi.encodePacked(ADDR_REVERSE_NODE, sha3HexAddress(addr)));
     }
 

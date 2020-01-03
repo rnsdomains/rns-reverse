@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.5.3;
 
 import "@rsksmart/rns-registry/contracts/AbstractRNS.sol";
 
@@ -23,7 +23,7 @@ contract ReverseSetup {
         reverseOwner = _reverseOwner;
     }
 
-   function run() public {
+   function run() external {
         require(rns.owner(REVERSE) == address(this), "Not reverse owner");
 
         // run
