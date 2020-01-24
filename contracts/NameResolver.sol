@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.5.3;
 
 import "./ResolverBase.sol";
 import "@rsksmart/rns-registry/contracts/AbstractRNS.sol";
@@ -24,10 +24,10 @@ contract NameResolver is ResolverBase {
     /// @notice Sets the name associated with an RNS node, for reverse records.
     /// @dev May only be called by the owner of that node in the RNS registry.
     /// @param node The node to update.
-    /// @param name The name to set.
-    function setName(bytes32 node, string calldata name) external onlyOwner(node) {
-        names[node] = name;
-        emit NameChanged(node, name);
+    /// @param newName The name to set.
+    function setName(bytes32 node, string calldata newName) external onlyOwner(node) {
+        names[node] = newName;
+        emit NameChanged(node, newName);
     }
 
     /// @notice Returns the name associated with an RNS node, for reverse records.

@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.5.3;
 
 /// source: https://github.com/ensdomains/resolvers/blob/master/contracts/ResolverBase.sol
 contract ResolverBase {
