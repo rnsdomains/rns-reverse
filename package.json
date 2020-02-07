@@ -1,12 +1,15 @@
 {
   "name": "@rsksmart/rns-reverse",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "RNS Reverse",
   "files": [
     "/contracts",
-    "!/contracts/Migrations.sol"
+    "!/contracts/Migrations.sol",
+    "/ReverseRegistrarData.json",
+    "/NameResolverData.json"
   ],
   "scripts": {
+    "prepublish": "npx truffle compile && node ./datagen.js",
     "test": "truffle test"
   },
   "repository": {
@@ -32,6 +35,7 @@
     "@truffle/hdwallet-provider": "^1.0.18",
     "chai": "^4.2.0",
     "eth-ens-namehash": "^2.0.8",
-    "openzeppelin-test-helpers": "^0.4.3"
+    "openzeppelin-test-helpers": "^0.4.3",
+    "truffle": "^5.1.12"
   }
 }

@@ -3,7 +3,9 @@ const fs = require('fs');
 let mnemonic;
 try {
   mnemonic = fs.readFileSync(".secret").toString().trim();
-} catch {}
+} catch {
+  mnemonic = 'INVALID'
+}
 
 module.exports = {
   networks: {

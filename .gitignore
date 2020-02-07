@@ -1,4 +1,6 @@
 node_modules/
 .secret
 build/
-.vscode/
+.vscode
+ReverseRegistrarData.json
+NameResolverData.json
