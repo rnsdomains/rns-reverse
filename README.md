@@ -2,6 +2,9 @@
 
 # RNS Reverse Resolution implementation
 
+[![npm version](https://badge.fury.io/js/%40rsksmart%2Frns-reverse.svg)](https://badge.fury.io/js/%40rsksmart%2Frns-reverse)
+[![Crytic Status](https://crytic.io/api/repositories/voO36L6vQGafg0e3kI0Fxw/badge.svg?token=f8a2448e-5aa2-4398-83e4-254789b2f3e6)](https://crytic.io/rnsdomains/rns-reverse)
+
 - Name resolver: [0x4b1a11bf6723e60b9d2e02aa3ece34e24bde77d9](https://explorer.rsk.co/address/0x4b1a11bf6723e60b9d2e02aa3ece34e24bde77d9)
 - Reverse registrar: [0xd25c3f94a743b93ecffecbe691beea51c3c2d9d1](https://explorer.rsk.co/address/0xd25c3f94a743b93ecffecbe691beea51c3c2d9d1)
 
