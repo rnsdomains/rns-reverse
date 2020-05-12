@@ -5,7 +5,7 @@ const ReverseSetup = artifacts.require('ReverseSetup');
 
 const namehash = require('eth-ens-namehash').hash;
 
-const expectRevert = require('openzeppelin-test-helpers').expectRevert;
+const expectRevert = require('@openzeppelin/test-helpers').expectRevert;
 const expect = require('chai').expect;
 
 contract('ReverseSetup', async accounts => {

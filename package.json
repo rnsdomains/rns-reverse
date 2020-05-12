@@ -9,6 +9,7 @@
     "/NameResolverData.json"
   ],
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "prepublish": "npx truffle compile && node ./datagen.js",
     "test": "truffle test"
   },
@@ -28,14 +29,18 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^2.4.0",
-    "@rsksmart/rns-registry": "^1.0.0"
+    "@rsksmart/rns-registry": "^1.0.0",
+    "npm-force-resolutions": "0.0.3"
   },
   "devDependencies": {
-    "@openzeppelin/test-helpers": "^0.5.4",
+    "@openzeppelin/test-helpers": "^0.5.5",
     "@truffle/hdwallet-provider": "^1.0.18",
     "chai": "^4.2.0",
     "eth-ens-namehash": "^2.0.8",
-    "openzeppelin-test-helpers": "^0.4.3",
     "truffle": "^5.1.12"
+  },
+  "resolutions": {
+    "minimist": ">=0.2.1",
+    "decompress": ">=4.2.1"
   }
 }
