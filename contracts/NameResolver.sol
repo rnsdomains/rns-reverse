@@ -1,10 +1,10 @@
 pragma solidity ^0.5.3;
 
-import "./ResolverBase.sol";
+import "./ReverseResolverBase.sol";
 import "@rsksmart/rns-registry/contracts/AbstractRNS.sol";
 
 /// source: https://github.com/ensdomains/resolvers/blob/master/contracts/profiles/NameResolver.sol
-contract NameResolver is ResolverBase {
+contract NameResolver is ReverseResolverBase {
     bytes4 constant private NAME_INTERFACE_ID = 0x691f3431;
     AbstractRNS rns;
 
