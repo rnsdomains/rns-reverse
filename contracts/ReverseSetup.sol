@@ -17,6 +17,9 @@ contract ReverseSetup {
         address _reverseRegistrar,
         address payable _reverseOwner
     ) public {
+        require(_nameResolver != address(0), "No 0 address");
+        require(_reverseRegistrar != address(0), "No 0 address");
+        require(_reverseOwner != address(0), "No 0 address");
         rns = _rns;
         nameResolver = _nameResolver;
         reverseRegistrar = _reverseRegistrar;
