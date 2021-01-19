@@ -22,7 +22,7 @@
     "rsk"
   ],
   "author": "ilanolkies",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/rnsdomains/rns-reverse/issues"
   },
