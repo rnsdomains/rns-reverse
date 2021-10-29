@@ -15,4 +15,9 @@ module.exports = {
       gasPrice: 60000000,
     }
   },
+  compilers: {
+    solc: {
+      version: "0.8.4",    // Fetch exact version from 
+    }
+  }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@rsksmart/rns-reverse",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "RNS Reverse",
   "files": [
     "/contracts",
@@ -27,15 +27,14 @@
     "url": "https://github.com/rnsdomains/rns-reverse/issues"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^2.4.0",
-    "@rsksmart/rns-registry": "^1.0.0"
+    "@openzeppelin/contracts": "^4.3.2",
+    "@rsksmart/rns-registry": "rnsdomains/rns-registry#feature/solVUpgrade"
   },
   "devDependencies": {
-    "@openzeppelin/test-helpers": "^0.5.4",
+    "@openzeppelin/test-helpers": "^0.5.15",
     "@truffle/hdwallet-provider": "^1.0.18",
-    "chai": "^4.2.0",
+    "chai": "^4.3.4",
     "eth-ens-namehash": "^2.0.8",
-    "openzeppelin-test-helpers": "^0.4.3",
-    "truffle": "^5.1.12"
+    "truffle": "^5.4.16"
   }
 }
