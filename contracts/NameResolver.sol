@@ -1,23 +1,23 @@
-pragma solidity ^0.5.3;
+pragma solidity ^0.8.4;
 
-import "./ReverseResolverBase.sol";
-import "@rsksmart/rns-registry/contracts/AbstractRNS.sol";
+import {ReverseResolverBase} from "./ReverseResolverBase.sol";
+import {AbstractRNS} from "@rsksmart/rns-registry/contracts/AbstractRNS.sol";
 
 /// source: https://github.com/ensdomains/resolvers/blob/master/contracts/profiles/NameResolver.sol
 contract NameResolver is ReverseResolverBase {
-    bytes4 constant private NAME_INTERFACE_ID = 0x691f3431;
+    bytes4 private constant NAME_INTERFACE_ID = 0x691f3431;
     AbstractRNS rns;
 
     event NameChanged(bytes32 indexed node, string name);
 
-    mapping(bytes32=>string) names;
+    mapping(bytes32 => string) names;
 
-    modifier onlyOwner (bytes32 node) {
+    modifier onlyOwner(bytes32 node) {
         require(msg.sender == rns.owner(node), "Only owner");
         _;
     }
 
-    constructor (AbstractRNS _rns) public {
+    constructor(AbstractRNS _rns) {
         rns = _rns;
     }
 
@@ -25,7 +25,10 @@ contract NameResolver is ReverseResolverBase {
     /// @dev May only be called by the owner of that node in the RNS registry.
     /// @param node The node to update.
     /// @param newName The name to set.
-    function setName(bytes32 node, string calldata newName) external onlyOwner(node) {
+    function setName(bytes32 node, string calldata newName)
+        external
+        onlyOwner(node)
+    {
         names[node] = newName;
         emit NameChanged(node, newName);
     }
@@ -38,7 +41,14 @@ contract NameResolver is ReverseResolverBase {
         return names[node];
     }
 
-    function supportsInterface(bytes4 interfaceID) public pure returns(bool) {
-        return interfaceID == NAME_INTERFACE_ID || super.supportsInterface(interfaceID);
+    function supportsInterface(bytes4 interfaceID)
+        public
+        pure
+        override
+        returns (bool)
+    {
+        return
+            interfaceID == NAME_INTERFACE_ID ||
+            super.supportsInterface(interfaceID);
     }
 }
