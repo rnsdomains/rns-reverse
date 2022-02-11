@@ -27,7 +27,7 @@
     "url": "https://github.com/rnsdomains/rns-reverse/issues"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^2.4.0",
+    "@openzeppelin/contracts": "^4.4.2",
     "@rsksmart/rns-registry": "^1.0.0"
   },
   "devDependencies": {
